@@ -9,6 +9,9 @@ import harryimg from "F:/flappy/__maingame__/harry.png";
 import rachelimg from "F:/flappy/__maingame__/rachel.png";
 import mikeimg from "F:/flappy/__maingame__/mike.png";
 import donnaimg from "F:/flappy/__maingame__/donna.png";
+import loginimg from "F:/flappy/__maingame__/loginimg.png";
+import highscoreimg from "F:/flappy/__maingame__/highscoreimg.png";
+import ppimg from "F:/flappy/__maingame__/pp.png";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -62,27 +65,61 @@ const LoginForm = () => {
               </div>
             </div>
           </div>
-          <div className="login flex flex-col justify-center left bg-white/20 backdrop-blur-md rounded-lg p-4  shadow-md"></div>
+          <div className="login flex flex-col justify-center left bg-white/20 backdrop-blur-md rounded-lg p-4  shadow-md">
+            <div className="login-img p-35 pt-0 pb-2">
+              <img src={`${loginimg}`} alt="" />
+            </div>
+            <div className="login-form">
+              <form onSubmit={handleSubmit} className="z-10">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <button type="submit" className="mt-5 text-black">
+                  Login
+                </button>
+              </form>
+            </div>
+            <div className="player-card mt-5 flex flex-col">
+              <div className="info flex flex-row">
+                <div className="profile-photo ml-3 mt-3">
+                  <img src={`${ppimg}`} alt="profilepic" />
+                </div>
+                <div className="player-info pl-3 pt-3 flex flex-col gap-1">
+                  <p id="name" className="text-black">
+                    user singh khabardar
+                  </p>
+                  <p id="username" className="text-black">
+                    lunarboy256
+                  </p>
+                  <p id="rank" className="text-black">
+                    56
+                  </p>
+                </div>
+              </div>
+              <div className="high-score pt-5 pl-3">
+                <img
+                  src={`${highscoreimg}`}
+                  alt="highscoreimg"
+                  class="max-w-xs h-[40px]"
+                />
+              </div>
+            </div>
+            <p className="mt-5 text-black">
+              New User ? <a href="">SignUp</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    // <>
-    //   <form onSubmit={handleSubmit} className="z-10">
-    //     <input
-    //       type="email"
-    //       placeholder="Email"
-    //       value={email}
-    //       onChange={(e) => setEmail(e.target.value)}
-    //     />
-    //     <input
-    //       type="password"
-    //       placeholder="Password"
-    //       value={password}
-    //       onChange={(e) => setPassword(e.target.value)}
-    //     />
-    //     <button type="submit">Login</button>
-    //   </form>
-    // </>
   );
 };
 
