@@ -1,11 +1,24 @@
 const players = [
   {
     name: "Bekachu",
-    path: "../public/players/Bekachu.png",
+    path: "/players/Bekachu.png",
+    ogimagePath: "F:/flappy/flappybird-login/public/Bekachu.png",
   },
-  { name: "Chippy", path: "../public/players/Chippy.png" },
-  { name: "Quackaroo", path: "../public/players/Quackaroo.png" },
-  { name: "Waddlepop", path: "../public/players/Waddlepop.png" },
+  {
+    name: "Chippy",
+    path: "/players/Chippy.png",
+    ogimagePath: "F:/flappy/flappybird-login/public/Chippy.png",
+  },
+  {
+    name: "Quackaroo",
+    path: "/players/Quackaroo.png",
+    ogimagePath: "F:/flappy/flappybird-login/public/Quackaroo.png",
+  },
+  {
+    name: "Waddlepop",
+    path: "/players/Waddlepop.png",
+    ogimagePath: "F:/flappy/flappybird-login/public/Waddlepop.png",
+  },
 ];
 
 export { players };

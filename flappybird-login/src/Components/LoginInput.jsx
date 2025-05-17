@@ -73,7 +73,7 @@ const LoginInput = () => {
           <img
             src={`${highscoreimg}`}
             alt="highscoreimg"
-            class="max-w-xs h-[40px]"
+            className="max-w-xs h-[40px]"
           />
         </div>
       </div>
